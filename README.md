@@ -10,6 +10,10 @@ Problem statement:
   
 Problem setting:
 We need a  login system to verify the user permission (i.e. mama-- read and write, sister-- read-only)
-We need a personal information management system storing children’s basic information including names, ages, codes, grades each time, which can be updated automatically by the system.
-We need a recommendation system which marks the priority of shipment of every child by some criteria.
+We need a personal information management system storing children’s basic information including names, ages, codes, grades each time, which can be updated automatically by the system. The information can be viewed, searched, sorted and changed by the user.
+We need a recommendation system which marks the priority of shipment of every child according to the following rules:
+Children below age of 6 is not considered in the ranking.
+Children between 6 to 12 is given a relative score with age possessing a weight of 20% and grade of 80%.
+From low relative score to high relative score, the children are given a shipment priority from high to low.
+Children reaching age of 12 is immediately raised to the highest priority.
 We need a notification system which reminds Mama of the child that should be shipped in the month.
