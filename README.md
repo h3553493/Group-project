@@ -9,11 +9,11 @@ Problem statement:
   The current selection system is relatively low in efficiency as Mama have to update children’s information, calculate the average grades and select the proper person by herself. Huge amount of repetitive work will cost caretaker numerous time, which could have been spent playing with children, teaching them more knowledge. So a complete children management system is integrate for Mama to relieve her from the labor.
   
 Problem setting:
-We need a  login system to verify the user permission (i.e. mama-- read and write, sister-- read-only)
-We need a personal information management system storing children’s basic information including names, ages, codes, grades each time, which can be updated automatically by the system. The information can be viewed, searched, sorted and changed by the user.
-We need a recommendation system which marks the priority of shipment of every child according to the following rules:
-Children below age of 6 is not considered in the ranking.
-Children between 6 to 12 is given a relative score with age possessing a weight of 20% and grade of 80%.
-From low relative score to high relative score, the children are given a shipment priority from high to low.
-Children reaching age of 12 is immediately raised to the highest priority.
-We need a notification system which reminds Mama of the child that should be shipped in the month.
+  1.We need a  login system to verify the user permission (i.e. mama-- read and write, sister-- read-only)
+  2.We need a personal information management system storing children’s basic information including names, ages, codes, grades each time, which can be updated automatically by the system. The information can be viewed, searched, sorted and changed by the user.
+  3.We need a recommendation system which marks the priority of shipment of every child according to the following rules:
+       3.1 Children below age of 6 is not considered in the ranking.
+       3.2 Children between 6 to 12 is given a relative score with age possessing a weight of 20% and grade of 80%.    
+       3.3 From low relative score to high relative score, the children are given a shipment priority from high to low.
+       3.4 Children reaching age of 12 is immediately raised to the highest priority.
+  4.We need a notification system which reminds Mama of the child that should be shipped in the month.
