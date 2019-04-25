@@ -68,15 +68,14 @@ int main(){
             //3. import test score
             case '3':
                 if (access){
-                    //ask the use to input the name of the file storing the score to be import
-                    interface_import();
-                    string cmd3="";
-                    cin>>cmd3;
-                    while (cmd3 != "back"){
-                        //could first assume the files are of legal format, can later alter the program to create intermediate files while importing, show a error alert when error detected in the file and return to the state before importing
-                        //remember to auto upgrade the age!
-                        score_import();
-                        cin>>cmd3;
+                    //ask the user to input the name of the file storing the score to be import
+                    //could first assume the files are of legal format, can later alter the program to create intermediate files while importing, show a error alert when error detected in the file and return to the state before importing
+                    //remember to auto upgrade the age!
+                    interface_scoreimport();
+                    string scorefile_txt;
+                    cin>>scorefile_txt;
+                    score_import(scorefile_txt);
+                    age_upgrade();
                     }
                 }
                 else cout<<"Sorry, no access."<<endl;
