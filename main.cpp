@@ -76,6 +76,7 @@ int main(){
                     cin>>scorefile_txt;
                     score_import(scorefile_txt);
                     age_upgrade();
+                    cout<<"Success!"<<endl;
                     }
                 }
                 else cout<<"Sorry, no access."<<endl;
