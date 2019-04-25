@@ -3,12 +3,14 @@
 #include <iomanip>
 #include <fstream>
 #include <sstream>
-#include "interface.h"
+//#include "interface.h"
 using namespace std;
 
 int interface_login(){
     cout<<setw(60)<<setfill('-')<<""<<endl;
-    cout<<'|'<<setw(10)<<setfill(' ')<<"Welcome to the Grace Field management system"<<setw(10)<<endl;
+    cout<<'|'<<setw(58)<<setfill(' ')<<""<<'|'<<endl;
+    cout<<'|'<<setw(4)<<""<<"Welcome to the Grace Field House management system"<<setw(4)<<""<<'|'<<endl;
+    cout<<'|'<<setw(58)<<""<<'|'<<endl;
     cout<<setw(60)<<setfill('-')<<""<<endl;
     while (true){
         cout<<"Please log in with your username and password"<<endl;
@@ -28,7 +30,7 @@ int interface_login(){
             string cname, cpassword, access;
             iss>>cname>>cpassword>>access;
             if (username==cname && password==cpassword){
-                cout<<"Log in success"<<endl;
+                cout<<"Log in success.\n"<<endl;
                 cout<<"Welcome, "<<username<<".\t"<<"Current access level: "<<access<<".\n";
                 in.close();
                 if (access == "mama") return 1;
@@ -40,7 +42,7 @@ int interface_login(){
 }
 
 void interface_welpage(int access){
-    cout<<"1. read children details"<<endl;
+    cout<<"\n1. read children details"<<endl;
     if (access==1){
         cout<<"2. child intake or shipment"<<endl;
         cout<<"3. import test score"<<endl;
