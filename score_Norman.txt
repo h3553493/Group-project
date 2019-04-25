@@ -1,0 +1,9 @@
+test1	300
+test2	300
+test3	299
+test4	299
+test5	300
+test6	299
+test7	298
+test8	300
+test9	300

@@ -1,30 +1,30 @@
-Emma	63194	11
-Norman	22194 	11
-Ray	81194 	11
-Don	16194 	10
-Gilda 	65194 	10
-Nat 	30294	9
-Anna 	48194	9
-Thoma 	55294	7
-Lani	54294	7
-Conny 	48294	6
-Dominic	07294	6
-Jemima	31394	5
-Rosie	50394	5
-Ivet	59294	5
-Chris	70394	5
-Alicia	71394	5
-Mark	79294	5
-Phil	34394	4
-Shelly	74394	4
-Maya	42394	4
-Naila	53394	4
-Hans	82394	4
-Jasper	04394	4
-Eugene	46394	4
-Vivian	55394	3
-Damdin	57394	3
-Tom	66394	3
-Nina	77394	3
-Chamberlain	85394	3
-Carol	53494	1
+Emma	63194	11	F
+Norman	22194 	11	M
+Ray	81194 	11	M
+Don	16194 	10	M
+Gilda 	65194 	10	F
+Nat 	30294	9	M
+Anna 	48194	9	F
+Thoma 	55294	7	M
+Lani	54294	7	M
+Conny 	48294	6	F
+Dominic	07294	6	M
+Jemima	31394	5	M
+Rosie	50394	5	F
+Ivet	59294	5	M
+Chris	70394	5	M
+Alicia	71394	5	F
+Mark	79294	5	M
+Phil	34394	4	M
+Shelly	74394	4	F
+Maya	42394	4	F
+Naila	53394	4	F
+Hans	82394	4	M
+Jasper	04394	4	M
+Eugene	46394	4	M
+Vivian	55394	3	F
+Damdin	57394	3	M
+Tom	66394	3	M
+Nina	77394	3	F
+Chamberlain	85394	3	M
+Carol	53494	1	F
