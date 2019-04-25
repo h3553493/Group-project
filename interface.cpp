@@ -1,5 +1,7 @@
-#ifndef INTERFACE_H_INCLUDED
-#define INTERFACE_H_INCLUDED
+#include <iostream>
+#include <string>
+#include "interface.h"
+using namespace std;
 
 int interface_login();
 
@@ -14,5 +16,3 @@ void interface_scoreimport();
 void  interface_rank();
 
 void interface_exit();
-
-#endif // INTERFACE_H_INCLUDED
