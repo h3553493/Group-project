@@ -22,27 +22,12 @@ void child_info(){
 }
 
 void child_detail(string name){
-    string txtname = "score_"+name+".txt";
+    string txtname =    name+"_score.txt";
     ifstream detail(txtname);
     if (detail.fail()){
         cout<<"Cannot find this child, try again please:";
         exit(1);
     }
-    cout<<"The test result of child "<<name<<" :"<<endl;
-    string line;
-    int total=0,times=0;
-    while (getline(detail,line)){
-        istringstream iss(line);
-        int score;
-        string testtime;
-        iss>>testtime>>score;
-        total += score;
-        times+=1;
-        cout<<line<<endl;
-    }
-    detail.close();
-    cout<<"Total test attended: "<<times<<endl;
-    cout<<"Average score: "<<total/times*1.0<<endl;
 }
 
 void child_add(){
@@ -57,8 +42,9 @@ void child_add(){
     ofstream stuinfo("studentinfo.txt",ios::app);
     stuinfo<<name<<"\t"<<code<<"\t"<<age<<"\t"<<gender<<endl;
     stuinfo.close();
-    ofstream personal("score_"+name+".txt");
+    ofstream personal(name+"_score.txt");
     personal.close();
+    cout<<"The new child have been added to the system, welcome to grace field house."<<endl;
 }
 
 void child_ship(){
@@ -80,7 +66,7 @@ void child_ship(){
         replaced.close();
         remove("studentinfo.txt");
         rename("temp.txt","studentinfo.txt");
-        string txtname="score_"+name+".txt";
+        string txtname = name+"score.txt";
         remove((txtname).c_str());
         cout<<"Shipment procedure complete, thank you for your work."<<endl;
     }
@@ -89,4 +75,18 @@ void child_ship(){
         remove("temp.txt");
         exit(1);
     }
+}
+
+
+int main(){
+    cout<<"\nchild_info :"<<endl;
+    child_info();
+    cout<<"\n\nchild_detail: "<<endl;
+    string name;
+    cin>>name;
+    child_detail(name);
+    cout<<"\n\nchild add: "<<endl;
+    child_add();
+    cout<<"\n\nchild shipment: "<<endl;
+    child_ship();
 }

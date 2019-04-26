@@ -74,3 +74,19 @@ void  interface_rank(){
 void interface_exit(){
     cout<<"You have successfully logged out, thanks for using Grace Field management system!"<<endl;
 }
+
+int main(){
+    cout<<"Log in interface: "<<endl;
+    interface_login();
+    interface_welpage(1);
+    cout<<"info interface: "<<endl;
+    interface_info();
+    cout<<"\n\naddship interface: "<<endl;
+    interface_addship();
+    cout<<"\n\nsocoreimport interface: "<<endl;
+    interface_scoreimport();
+    cout<<"\n\nrank interface: "<<endl;
+    interface_rank();
+    cout<<"\n\nlog out interface: "<<endl;
+    interface_exit();
+}
