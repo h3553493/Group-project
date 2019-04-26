@@ -14,11 +14,3 @@ test44A	295
 test44B	298
 test45A	296
 test45B	299
-test233 280
-test234 280
-test223 280
-test123 280
-test90 280
-test999 280
-test111 280
-test123 280
