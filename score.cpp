@@ -30,7 +30,7 @@ void import(string scorefile_txt)
         }
         else
         {
-          fout<<testno<<": "<<score<<endl;
+          fout<<testno<<" "<<score<<endl;
         }
         fout.close();
         fout.clear();

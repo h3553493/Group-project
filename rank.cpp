@@ -84,7 +84,14 @@ void notif()
           		}
         	}
     	}
-    	cout<<" should be shipped."<<endl;
+    	if (j==0)
+    	{
+    		cout<<"No one should be shipped."<<endl;
+		}
+		else
+		{
+			cout<<" should be shipped."<<endl;
+		}
     	ofstream fout("rank.txt");
     	if (fout.fail())
     	{
@@ -108,7 +115,24 @@ void notif()
     	delete []s;
     }
 	fin.close();
-    
+}
+void showrank()
+{
+	string line;
+	ifstream fin("rank.txt");
+	if (fin.fail())
+	{
+		cout<<"Error in file opening!"<<endl;
+		exit(1);
+	}
+	else
+	{
+		while (getline(fin,line))
+		{
+			cout<<line<<endl;
+		}
+	}
+	fin.close();
 }
 
 
