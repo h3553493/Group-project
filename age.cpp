@@ -31,10 +31,10 @@ void upgrade()
 		}
 		else
 		{
-			fout<<name<<" "<<code<<" "<<age<<" "<<gender<<" "<<average<<endl;
+			fout<<name<<"\t"<<code<<"\t"<<age<<"\t"<<gender<<"\t"<<average<<endl;
 		}
 		fout.close();
-		fout.clear();    
+		fout.clear();
       }
     }
     fin.close();

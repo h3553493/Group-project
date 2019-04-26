@@ -4,6 +4,7 @@
 #include "child.h"
 #include "score.h"
 #include "rank.h"
+#include "age.h"
 using namespace std;
 
 
@@ -16,7 +17,7 @@ int main(){
 
     string command="";
     cin>>command;
-    while (command != "exit"){
+    while (command != "5"){
 
         //1. read child info
         if (command=="1"){
@@ -47,7 +48,7 @@ int main(){
                     if (cmd2 == "add")      child_add();
 
                     //ask the user name of the child to be shipped, another yes/no to double check
-                    else if (cmd2 == "shipment")     child_ship();
+                    else if (cmd2 == "ship")     child_ship();
 
                     else   cout<<"Sorry, wrong command."<<endl;
 
@@ -68,8 +69,9 @@ int main(){
                 interface_scoreimport();
                 string scorefile_txt;
                 cin>>scorefile_txt;
-                score_import(scorefile_txt);
-                age_upgrade();
+                import(scorefile_txt);
+                getaverage();
+                upgrade();
             }
             else cout<<"Sorry, no access."<<endl;
         }
@@ -78,7 +80,9 @@ int main(){
         //4. ranking and notifications
         else if (command == "4"){
             //show notification: the child needs to be shipped immediately
-            rank_notif();
+            int n;
+            getn(n);
+            notif(n);
 
             //ask the user to input "all" or "back"
             interface_rank();
@@ -86,7 +90,7 @@ int main(){
             cin>>cmd4;
             while (cmd4 != "back"){
                 //show all child sorted by ranking
-                if (cmd4 == "all")      rank_all();
+                if (cmd4 == "all")      showrank();
 
                 else       cout<<"Sorry, wrong command."<<endl;
 

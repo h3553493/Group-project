@@ -35,7 +35,7 @@ void import(string scorefile_txt)
         fout.close();
         fout.clear();
       }
-	}	
+	}
     fin.close();
 }
 void getaverage()
@@ -75,7 +75,7 @@ void getaverage()
 				}
 			}
 			file1.close();
-			file1.clear();		
+			file1.clear();
 			average1=double (total)/double (n);
 			ofstream file("studentinfo1.txt",ios::app);
 			if (file.fail())
@@ -85,7 +85,7 @@ void getaverage()
 			}
 			else
 			{
-				file<<name<<" "<<code<<" "<<age<<" "<<gender<<" "<<average1<<endl;
+				file<<name<<"\t"<<code<<"\t"<<age<<"\t"<<gender<<"\t"<<average1<<endl;
 			}
 			file.close();
 			file.clear();

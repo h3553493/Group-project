@@ -52,7 +52,8 @@ void interface_welpage(int access){
         cout<<"3. import test score\t\t(mama only)"<<endl;
     }
     cout<<"4. shipment notifications and ranking"<<endl;
-    cout<<"What would you like to do? (1-4): ";
+    cout<<"5. exit"<<endl;
+    cout<<"What would you like to do? (1-5): ";
 }
 
 void  interface_info(){
@@ -60,7 +61,7 @@ void  interface_info(){
 }
 
 void interface_addship(){
-    cout<<"Input \"add\" to add a new child; \"ship\" to ship an existing child; \"back\" to main page."<<endl;
+    cout<<"\nInput \"add\" to add a new child; \"ship\" to ship an existing child; \"back\" to main page."<<endl;
 }
 
 void interface_scoreimport(){
@@ -73,20 +74,4 @@ void  interface_rank(){
 
 void interface_exit(){
     cout<<"You have successfully logged out, thanks for using Grace Field management system!"<<endl;
-}
-
-int main(){
-    cout<<"Log in interface: "<<endl;
-    interface_login();
-    interface_welpage(1);
-    cout<<"info interface: "<<endl;
-    interface_info();
-    cout<<"\n\naddship interface: "<<endl;
-    interface_addship();
-    cout<<"\n\nsocoreimport interface: "<<endl;
-    interface_scoreimport();
-    cout<<"\n\nrank interface: "<<endl;
-    interface_rank();
-    cout<<"\n\nlog out interface: "<<endl;
-    interface_exit();
 }
