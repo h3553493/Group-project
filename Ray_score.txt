@@ -16,11 +16,4 @@ test44A	299
 test44B	300
 test45A	300
 test45B	300
-test233 300
-test234 300
-test223 300
-test123 300
-test90 300
-test999 300
-test111 300
-test123 300
+
