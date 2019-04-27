@@ -1,5 +1,0 @@
-Emma	300
-Norman	300
-Ray	300
-Don	280
-Gilda	278	
