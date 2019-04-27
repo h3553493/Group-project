@@ -25,6 +25,7 @@ void child_info(){
 void child_detail(string name){
     string txtname = "storage/"+name+"_score.txt";
     ifstream detail(txtname);
+    double ave=0;
     if (detail.fail()){
         cout<<"\nCannot find this child, try again please."<<endl;
     }
@@ -43,7 +44,8 @@ void child_detail(string name){
         }
         detail.close();
         cout<<"Total test attended: "<<times<<endl;
-        cout<<"Average score: "<<total/times*1.0<<endl;
+        if (times!=0) ave=total/times*1.0;
+        cout<<"Average score: "<<ave<<endl;
     }
 }
 
