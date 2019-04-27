@@ -32,9 +32,11 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="age.cpp" />
 		<Unit filename="age.h" />
 		<Unit filename="child.cpp" />
 		<Unit filename="child.h" />
+		<Unit filename="interface.cpp" />
 		<Unit filename="interface.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="rank.cpp" />

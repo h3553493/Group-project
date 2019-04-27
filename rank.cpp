@@ -16,7 +16,7 @@ void notif(int n)
 	string line,name,gender;
 	int code,i,j,rank;
 	double age,average,rankscore;
-	ifstream fin("studentinfo.txt");
+	ifstream fin("storage/studentinfo.txt");
     if(fin.fail())
     {
       cout<<"Error in file opening!"<<endl;
@@ -34,7 +34,7 @@ void notif(int n)
         	{
           		rankscore=0;
         	}
-        	else if (age<=12)
+        	else if (age<12)
         	{
           		rankscore=age/12*20+average/300*80;
         	}
@@ -76,7 +76,7 @@ void notif(int n)
           		}
           		else
           		{
-            		cout<<","<<s[i].name;
+            		cout<<", "<<s[i].name;
           		}
         	}
     	}
@@ -88,7 +88,7 @@ void notif(int n)
 		{
 			cout<<" should be shipped."<<endl;
 		}
-    	ofstream fout("rank.txt");
+    	ofstream fout("storage/rank.txt");
     	if (fout.fail())
     	{
     		cout<<"Error in file opening!"<<endl;
@@ -116,7 +116,7 @@ void getn(int &n)
 {
 	n=0;
 	string line;
-	ifstream fin("studentinfo.txt");
+	ifstream fin("storage/studentinfo.txt");
 	if(fin.fail())
 	{
 		cout<<"Error in file opening!"<<endl;
@@ -135,7 +135,7 @@ void showrank()
 {
 	cout<<setfill(' ')<<setw(10)<<left<<"NAME"<<setw(11)<<"RANK-SCORE"<<setw(10)<<"RANK"<<endl;
 	string line;
-	ifstream fin("rank.txt");
+	ifstream fin("storage/rank.txt");
 	if (fin.fail())
 	{
 		cout<<"Error in file opening!"<<endl;

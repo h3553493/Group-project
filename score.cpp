@@ -9,7 +9,7 @@ void import(string scorefile_txt)
 	int score;
 	cout<<"Please input test number:"<<endl;
 	cin>>testno;
-	ifstream fin(scorefile_txt.c_str());
+	ifstream fin(("storage/"+scorefile_txt).c_str());
     if (fin.fail())
     {
       cout<<"Error in file opening!"<<endl;
@@ -21,7 +21,7 @@ void import(string scorefile_txt)
       {
         istringstream line_in(line);
         line_in>>name>>score;
-        name_score=name+"_score.txt";
+        name_score="storage/"+name+"_score.txt";
         ofstream fout(name_score.c_str(),ios::app);
         if (fout.fail())
         {
@@ -43,7 +43,7 @@ void getaverage()
 	string name,gender,name_score,line1,line,testno;
 	double age,average,n=0,average1;
 	int code,score,total=0;
-	ifstream fin("studentinfo.txt");
+	ifstream fin("storage/studentinfo.txt");
 	if (fin.fail())
 	{
 		cout<<"Error in file opening!"<<endl;
@@ -55,7 +55,7 @@ void getaverage()
 		{
 			istringstream iss(line);
 			iss>>name>>code>>age>>gender>>average;
-			name_score=name+"_score.txt";
+			name_score="storage/"+name+"_score.txt";
 			ifstream file1(name_score.c_str());
 			if (file1.fail())
 			{
@@ -77,7 +77,7 @@ void getaverage()
 			file1.close();
 			file1.clear();
 			average1=double (total)/double (n);
-			ofstream file("studentinfo1.txt",ios::app);
+			ofstream file("storage/studentinfo1.txt",ios::app);
 			if (file.fail())
 			{
 				cout<<"Error in file opening!"<<endl;
@@ -92,7 +92,11 @@ void getaverage()
 		}
 	}
 	fin.close();
-	remove("studentinfo.txt");
-	rename("studentinfo1.txt","studentinfo.txt");
+	remove("storage/studentinfo.txt");
+	rename("storage/studentinfo1.txt","storage/studentinfo.txt");
+}
+
+int main(){
+    getaverage();
 }
 

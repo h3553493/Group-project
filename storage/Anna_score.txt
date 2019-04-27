@@ -1,0 +1,13 @@
+test39B	259
+test40A	265
+test40B	285
+test41A	258
+test41B	262
+test42A	284
+test42B	267
+test43A	270
+test43B	269
+test44A	285
+test44B	282
+test45A	268
+test45B	289

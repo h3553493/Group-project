@@ -1,0 +1,6 @@
+Emma	100	1
+Norman	100	1
+Ray	100	1
+Don	94.2592	4
+Gilda	94.2	5
+cjy	0	6

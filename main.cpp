@@ -72,6 +72,7 @@ int main(){
                 import(scorefile_txt);
                 getaverage();
                 upgrade();
+                cout<<"score import complete.\n"<<endl;
             }
             else cout<<"Sorry, no access."<<endl;
         }

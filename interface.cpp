@@ -3,7 +3,7 @@
 #include <iomanip>
 #include <fstream>
 #include <sstream>
-//#include "interface.h"
+#include "interface.h"
 using namespace std;
 
 int interface_login(){
@@ -19,7 +19,7 @@ int interface_login(){
         cin>>username;
         cout<<"Password: ";
         cin>>password;
-        ifstream in("login.txt");
+        ifstream in("storage/login.txt");
         string line;
         if (in.fail()){
             cout<<"Failed to access the database, please try again later"<<endl;
@@ -57,7 +57,7 @@ void interface_welpage(int access){
 }
 
 void  interface_info(){
-    cout<<"Type in a name to see full score detail of a child; \"back\" to main page."<<endl;
+    cout<<"\nType in a name to see full score detail of a child; \"back\" to main page."<<endl;
 }
 
 void interface_addship(){
@@ -65,13 +65,13 @@ void interface_addship(){
 }
 
 void interface_scoreimport(){
-    cout<<"Input the full name of the file to be imported: ";
+    cout<<"\nInput the full name of the file to be imported: ";
 }
 
 void  interface_rank(){
-    cout<<"Input \"all\" to see the ranking of all children; \"back\" to main page."<<endl;
+    cout<<"\nInput \"all\" to see the ranking of all children; \"back\" to main page."<<endl;
 }
 
 void interface_exit(){
-    cout<<"You have successfully logged out, thanks for using Grace Field management system!"<<endl;
+    cout<<"You have successfully logged out, thanks for using Grace Field management system!\n\n"<<endl;
 }

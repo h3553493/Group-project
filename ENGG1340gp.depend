@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1556280495 source:c:\ѧϰ\engg1340\group project\project\child.cpp
+1556334591 source:c:\ѧϰ\engg1340\group project\project\child.cpp
 	<iostream>
 	<string>
 	<fstream>
@@ -11,14 +11,14 @@
 1556255811 c:\ѧϰ\engg1340\group project\project\child.h
 	<string>
 
-1556280620 source:c:\ѧϰ\engg1340\group project\project\rank.cpp
+1556335136 source:c:\ѧϰ\engg1340\group project\project\rank.cpp
 	<iostream>
 	<fstream>
 	<iomanip>
 	<sstream>
 	<string>
 
-1556280550 source:c:\ѧϰ\engg1340\group project\project\score.cpp
+1556333756 source:c:\ѧϰ\engg1340\group project\project\score.cpp
 	<iostream>
 	<sstream>
 	<fstream>
@@ -40,14 +40,14 @@
 
 1556266732 c:\ѧϰ\engg1340\group project\project\age.h
 
-1556270190 source:c:\ѧϰ\engg1340\group project\project\interface.cpp
+1556334678 source:c:\ѧϰ\engg1340\group project\project\interface.cpp
 	<iostream>
 	<string>
 	<iomanip>
 	<fstream>
 	<sstream>
 
-1556268837 source:c:\ѧϰ\engg1340\group project\project\age.cpp
+1556333570 source:c:\ѧϰ\engg1340\group project\project\age.cpp
 	<iostream>
 	<fstream>
 	<sstream>

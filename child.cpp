@@ -9,7 +9,7 @@ using namespace std;
 
 void child_info(){
     string line;
-    ifstream info("studentinfo.txt");
+    ifstream info("storage/studentinfo.txt");
     cout<<endl;
     cout<<setw(15)<<setfill(' ')<<left<<"NAME"<<setw(10)<<"CODE"<<setw(5)<<"AGE"<<setw(7)<<"GENDER"<<setw(7)<<"AVERAGE"<<endl;
     while (getline(info,line)){
@@ -23,7 +23,7 @@ void child_info(){
 }
 
 void child_detail(string name){
-    string txtname = name+"_score.txt";
+    string txtname = "storage/"+name+"_score.txt";
     ifstream detail(txtname);
     if (detail.fail()){
         cout<<"\nCannot find this child, try again please."<<endl;
@@ -39,7 +39,7 @@ void child_detail(string name){
             iss>>testtime>>score;
             total += score;
             times+=1;
-            cout<<line<<endl;
+            cout<<setw(10)<<right<<testtime<<setw(10)<<score<<endl;
         }
         detail.close();
         cout<<"Total test attended: "<<times<<endl;
@@ -52,15 +52,19 @@ void child_add(){
     double age=1;
     cout<<"Please type in the name of this new child: ";
     cin>>name;
+    while (name == "back"){
+        cout<<"Conflict with system command, you cannot use this name. Try again.";
+        cin>>name;
+    }
     cout<<"Please type in the code of this new child: ";
     cin>>code;
     cout<<"Please type in the gender of this new child(M/F): ";
     cin>>gender;
     int ave=0;
-    ofstream stuinfo("studentinfo.txt",ios::app);
+    ofstream stuinfo("storage/studentinfo.txt",ios::app);
     stuinfo<<name<<"\t"<<code<<"\t"<<age<<"\t"<<gender<<"\t"<<ave<<endl;
     stuinfo.close();
-    ofstream personal(name+"_score.txt");
+    ofstream personal("storage/"+name+"_score.txt");
     personal.close();
     cout<<"The new child have been added to the system, welcome to grace field house."<<endl;
 }
@@ -69,8 +73,8 @@ void child_ship(){
     string name, infoname;
     cout<<"Please type in the name of the child to be shipped: ";
     cin>>name;
-    ifstream origin("studentinfo.txt");
-    ofstream replaced("temp.txt");
+    ifstream origin("storage/studentinfo.txt");
+    ofstream replaced("storage/temp.txt");
     string line;
     bool found=false;
     while (!found){
@@ -90,10 +94,11 @@ void child_ship(){
             cout<<"Shipment procedure complete, thank you for your work."<<endl;
         }
         else{
-            cout<<"Child not found, try again."<<endl;
+            cout<<"Child not found, try again or \"back\""<<endl;
             cout<<"Please type in the name of the child to be shipped: ";
             cin>>name;
         }
         remove("temp.txt");
+        if (name=="back") break;
     }
 }

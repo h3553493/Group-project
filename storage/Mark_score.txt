@@ -1,0 +1,6 @@
+test43A	132
+test43B	121
+test44A	150
+test44B	141
+test45A	189
+test45B	177

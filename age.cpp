@@ -10,7 +10,7 @@ void upgrade()
 	string line,name,gender;
 	double average,age;
 	int code;
-	ifstream fin("studentinfo.txt");
+	ifstream fin("storage/studentinfo.txt");
     if (fin.fail())
     {
       cout<<"Error in opening file"<<endl;
@@ -23,7 +23,7 @@ void upgrade()
         istringstream iss(line);
         iss>>name>>code>>age>>gender>>average;
         age+=0.5;
-        ofstream fout("studentinfo1.txt",ios::app);
+        ofstream fout("storage/studentinfo1.txt",ios::app);
         if (fout.fail())
         {
         	cout<<"Error in file opening!"<<endl;
@@ -38,8 +38,8 @@ void upgrade()
       }
     }
     fin.close();
-    remove("studentinfo.txt");
-    rename("studentinfo1.txt","studentinfo.txt");
+    remove("storage/studentinfo.txt");
+    rename("storage/studentinfo1.txt","storage/studentinfo.txt");
 }
 
 
