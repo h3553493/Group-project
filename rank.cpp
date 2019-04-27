@@ -133,7 +133,6 @@ void getn(int &n)
 }
 void showrank()
 {
-	cout<<setfill(' ')<<setw(10)<<left<<"NAME"<<setw(11)<<"RANK-SCORE"<<setw(10)<<"RANK"<<endl;
 	string line;
 	ifstream fin("storage/rank.txt");
 	if (fin.fail())
@@ -143,12 +142,13 @@ void showrank()
 	}
 	else
 	{
+        cout<<setfill(' ')<<setw(15)<<left<<"NAME"<<setw(11)<<"RANK-SCORE"<<setw(10)<<"RANK"<<endl;
 		while (getline(fin,line))
 		{
 		    string name, score, rank;
 		    istringstream iss(line);
 		    iss>>name>>score>>rank;
-            cout<<setw(10)<<left<<name<<setw(11)<<score<<setw(10)<<rank<<endl;
+            cout<<setw(15)<<left<<name<<setw(11)<<score<<setw(10)<<rank<<endl;
 		}
 	}
 	fin.close();

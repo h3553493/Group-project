@@ -96,7 +96,4 @@ void getaverage()
 	rename("storage/studentinfo1.txt","storage/studentinfo.txt");
 }
 
-int main(){
-    getaverage();
-}
 
